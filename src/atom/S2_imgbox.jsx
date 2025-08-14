@@ -8,6 +8,7 @@ const S2_imgbox = ({title, subtitle1, subtitle2}) => {
     return <motion.div className="bg-[url(img1.jpg)] bg-cover bg-center  relative w-full h-[450px] p-10 text-white bg-blue-950 rounded-2xl flex flex-col gap-4"
     initial={hidden}
     whileInView={show}
+    whileHover={{filter: "brightness(0.7)"}}
     viewport={{amount:"all", once:true}}>
         <div className="text-2xl font-semibold">{title}</div>
         <div className="flex flex-col gap-1 font-medium text-[15px]">

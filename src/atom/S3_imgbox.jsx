@@ -15,6 +15,7 @@ const S3_imgbox = ({img, title, subtitle1, subtitle2}) => {
     style={{backgroundImage: `url(${imgObj[img]})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat:"no-repeat"}}
     initial={hidden}
     whileInView={show}
+    whileHover={{filter: "brightness(0.7)"}}
     viewport={{amount:"all", once:true}}>
         <div className="text-2xl font-semibold">{title}</div>
         <div className="flex flex-col gap-1 font-medium text-[15px]">
