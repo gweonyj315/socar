@@ -1,11 +1,18 @@
 import { motion } from "motion/react"
 import { CircleArrowRight } from "lucide-react";
 
-const S3_imgbox = ({title, subtitle1, subtitle2}) => {
+const S3_imgbox = ({img, title, subtitle1, subtitle2}) => {
     const hidden = {y:40, opacity:0}
     const show = {y:0, opacity:1, transition:{duration:0.5}}
+    const imgObj = {
+        first:"/img2.jpg",
+        second:"/img3.jpg",
+        third:"/img4.jpg",
+    }
+
 
     return <motion.div className="relative w-full h-[400px] p-10 text-white bg-blue-950 rounded-2xl flex flex-col gap-4"
+    style={{backgroundImage: `url(${imgObj[img]})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat:"no-repeat"}}
     initial={hidden}
     whileInView={show}
     viewport={{amount:"all", once:true}}>
